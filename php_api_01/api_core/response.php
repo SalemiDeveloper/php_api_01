@@ -5,7 +5,7 @@ class Response {
     public static function json($status = 200, $message = 'success', $data = null) {
 
         header('Content-Type: application/json');
-        // Checando se a API estÃ¡ ativa
+        // Checando se a API está ativa
         if (!API_IS_ACTIVE) {
             return json_encode([
             'status'  => 400,
